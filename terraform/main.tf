@@ -1,5 +1,5 @@
 resource "aws_security_group" "ssh" {
-  name = "sam-backend"
+  name = "pranesh-backend"
 
   # SSH
   ingress {
@@ -48,7 +48,7 @@ resource "aws_instance" "server" {
   vpc_security_group_ids = [aws_security_group.ssh.id]
 
   tags = {
-    Name = "Ansible-Remote-State"
+    Name = "Pranesh-server"
   }
 }
 
