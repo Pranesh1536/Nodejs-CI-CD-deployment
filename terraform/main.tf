@@ -1,5 +1,5 @@
 resource "aws_security_group" "ssh" {
-  name = "pranesh-backend"
+  name = "pranesh-server-1"
 
   # SSH
   ingress {
