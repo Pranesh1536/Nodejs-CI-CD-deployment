@@ -52,8 +52,11 @@ jobs:
 
       - name: Wait for SSH
         run: |
+          chmod 400 key.pem
+
           until ssh \
             -o StrictHostKeyChecking=no \
+            -o UserKnownHostsFile=/dev/null \
             -i key.pem \
             ubuntu@${{ steps.tf.outputs.ip }} \
             "echo 'EC2 Ready'"
